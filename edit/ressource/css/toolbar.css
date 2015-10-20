@@ -1,0 +1,70 @@
+.te_tools
+{
+		position: fixed;
+		bottom: 0px;
+		left: 0;
+		right: 0;
+}
+
+.te_toolbar
+{
+		font-family: Verdana, Helvetica, Arial;
+		font-size: 10px;
+		color: #ffffff;
+		line-height: 12px;
+		background: #999;
+		border: 1px solid;
+		border-color: #FFFFFF #555454 #555454 #FFFFFF;
+		border-right: 0px;
+		height: 20px;
+}
+
+.te_toolbar_logo
+{
+		padding: 4px;
+		padding-left: 8px;
+		padding-right: 10px;
+		float: left;
+}
+a.te_toolbar_button
+{
+		color: white;
+		text-decoration: none;
+		float: right;
+		padding: 4px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-left: 1px solid;
+		border-right: 1px solid;
+		border-left-color: #CFCACA;
+		border-right-color: #555454;
+		cursor: pointer;
+}
+a.te_toolbar_button:hover
+{
+		color: white;
+		text-decoration: none;
+		background-color: #777;
+}
+
+
+.te_console
+{
+		background-color: #000000;
+		color: #6CFF00;
+		padding: 10px;
+		font-size: 10px;
+		font-family: Verdana, Arial, Helvetica;
+		line-height: 14px;
+		height: 100px;
+		overflow: auto;
+}
+
+a.te_toolbar_error_button
+{
+	padding-left: 20px;
+	/*background-color: red;*/
+	background-image: url("../image/icon/clanbomber.png");
+	background-repeat:  no-repeat;
+	background-position: 3px 3px; 
+}

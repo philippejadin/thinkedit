@@ -1,0 +1,52 @@
+New menu system (proposal)
+
+te_menu($root, $depth)
+
+if root is a root node and depth = 1, it will return a main menu
+
+if root is the current node and level = 3, it will return a 3 level contextual menu.
+
+
+
+
+Deprecated : 
+How navigation in templates works
+
+
+There are different classes for navigation. They are all of this pattern :
+
+menu.xxx.class.php where xxx is the menu type
+
+for example main menu (top level) is menu.main.class.php
+
+
+Each menu class has at least those methods : 
+
+- render() -> renders the menu as html, for simple use cases
+
+- getArray()->gives an array of menu items :
+  A menu item has those methods :
+	
+	- getTitle()
+	- getUrl()
+	- getLevel()
+	- isCurrent();
+	
+	etc...
+
+	
+You can use either render() to render the menu for you or getArray() to generate the html yourself
+
+
+In templates, on content objects, you can use :
+
+$content->isUsedIn($something);
+
+$something can be, for instance 'navigation'
+
+This means : do I need to display this content in my navigation.
+
+
+This can be set in configuration using : 
+
+['table']['page']['use']['navigation'] = 'true'

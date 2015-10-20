@@ -1,0 +1,156 @@
+TODO for version 2.0 (mandatory things to fix before the 1.0 release)
+- remove unneeded files
+- make a simple demo design
+
+- concept of filters for each field
+$field->getFiltered() on the public frontend
+Filters can be wiki, bbcode, safe html, trim etc...
+
+- Default validation rules for fields (good defaults that can be overwritten in config)
+(min size / max size / required, etc...)
+
+
+General TODO (General features that affect more than one file / class):
+- permissions / roles / users
+- validation
+- filters
+- plugins
+- encrypted passwords (?)
+- multilingual records (mostly done !!!)
+- participation framework
+
+
+TODO (by order of importance) :
+- when deleting a record, it should also delete references to this record in the node table (in the tree)
+- node cache must be refeshed when a new field is added to the DB (else, objects are allways loaded in a separate query, lowering performance)
+- handling of path separators in *nix and windows. Define a constant, like PATH_SEPARATOR and use it everywhere
+- review all security todo in the code
+- plugin/hooks/alert system
+- validation of fields, with feedback in the edit UI
+- logout button (logout when browser is closed)
+- avoid duplication of actions (framework wide utility)
+- fields in/out filters (filters before a field is saved to the db and after it is loaded from the db)
+- optimize node->getAllNodes and menu classes
+- te_translate() for public website (where are public translations stored, in another table with fallback to admin translations?)
+- mysql backticks
+- friendly urls (in node class) / and node->loadByPath($path)
+- password reminder (feature disabled in admin until there)
+- handle record delete only if it is not located somewhere in the node tree
+- custom error handlers with pretty display
+- version support
+- separate dist- config files and user customized config files 
+
+
+New fields :
+- created (done)
+- modifed
+- email
+- user_login
+- user_ip
+- catpcha (for public comments for instance, but it must be only used on the public facing website) -> this is NOT a field type but something from the logic (not the model) 
+
+
+ATOMIC TODO (small bugs to fix)
+- url init uses also request as original parameter because else edit screen doesn't work. Use the form class in edit screen instead and update url class accordingly. URL should only handle http "get" parameters
+- better record find options (where with and / or, etc ...) see ruby on rails active record and zend active db object for ideas.
+
+ALMOST THERE :
+
+
+
+OPTIMIZATION STUFF :
+- optimize node for single query
+- caching where needed (using pear cache lite) (done)
+	
+DONE :
+- node publish + preview
+- deprecate old stuff / delete unused files
+- node template : you can use custom templates per nodes by adding php template files in /design/**yourdesign**/templates
+- nodeOptimized refresh (redirect to the same page) on edit in structure moveup/down
+- simple install (it is, but need some more features to be totally usefull)
+- db sync tool (sync DB to xml (and vice-versa?))
+- templates for public site (header / footer / template for each content type)
+- tags to use in templates and content : those are defined in /lib/thinkedit/template.lib.php
+  those are functions starting with te_
+- preview button
+- list pagination (could be revamped)
+- record delete sql add "limit 1" just in case (like phpmyadmin)
+- node properties in edit mode
+- design name config option / method to know which design we are currently using (it's defined in config.xml, tag <design>)
+- production / development mode (only show error details if in dev mode) AND only allow debug in dev mode as well todo : security
+- allow config folder outside doc root (madatory, xml config files are world readable!), with recursive search. Todo security
+- filesystem function to generate 'safe filenames' (url friendly) (remove accents, space, etc...)
+- node order fix bugs
+- tree (nodes)
+- config folder instead of single file (recursive search)
+- security
+-- inside classes (like record)
+-- inside the interface with redirect to login form
+-- user permision : $user::hasPermission($permission, $object)
+- login form
+- file management
+- relations
+- translate() for interface
+- separate thinkedit and config better : 
+  thinkedit->configuration->getTableList()
+	
+	thinkedit is a big factory
+	configuration handles all config "enquiry" needs
+	
+	All important (objects used in most queries and instancied only once) 
+	thinkedit objects are part of the global $thinkedit :
+	
+	$thinkedit->db->
+	$thinkedit->cache->
+	$thinkedit->user->
+	$thinkedit->configuration->
+	
+	so, when you need db, you do this : 
+	
+	global $thinkedit
+	$thinkedit->db->select() ...
+	
+	Pro :
+	This way we don't polute global namespace
+	It's very easy to use an important object (such as db)
+	
+	Con:
+	We instantiate a "big" thinkedit class even when we don't need all those objects
+	Need to check all the files for bad use of globals...
+	
+	including thinkedit.init.php, common.inc.php (in /edit)
+
+DISCARDED (will never be done because of design changes) :
+- datagrid global actions
+
+This one won't be done because it quite sucks currently :
+- use yaml file as config files (?) -> very simple conversion to AND from arrays, which is great to build config admin GUI
+
+From an older unreleased version:
+As of jan. 2004 :
+ok - check every use of 'locale' in sql queries : sometimes monolingual content cannot be queried
+ok - update order for sortable element on creation time (either on top or bottom of the "table")
+ok - order in relations
+ok - html internet explorer
+ok - limit text data in list view (limited to 32 chars for all type of data)
+ok - rework filters
+ok - relations with filemanager
+ok - config file protected using chmod
+ok - retain states of sort columns in the session
+ok - password field
+ok - checkbox field
+- module not displayed if sql table is empty
++- ok - header
+ok - layout header
+- layout file manager
+- layout module filemanager homepage
+- rework sort in list view (not displayed)
+new features
+- status
+- translate from edit detail page
+- poweredit
+- hierarchy manager
+- sql update (create table / fields ...) auto installer
+- filemanager with extended properties
+- edit relations
+ 

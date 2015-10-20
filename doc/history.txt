@@ -1,0 +1,344 @@
+For a complete and up to date history, look at the svn commit logs
+
+Revision: 239
+Author: philippejadin
+Date: 21:13:05, mardi 19 septembre 2006
+Message:
+plugin infrastructure update / minor interest :-)
+----
+
+
+Revision: 238
+Author: philippejadin
+Date: 16:40:00, jeudi 31 août 2006
+Message:
+Releasing 1.9.2 ;-)
+----
+
+
+
+Revision: 236
+Author: philippejadin
+Date: 16:37:44, lundi 28 août 2006
+Message:
+- serious improvement when a node is added : only a few queries used, even if we have a huge node list.
+
+- yapaka forum improved
+
+- "gotcha" captcha lib added, and used in the participation class to avoid spam. This will replace securimage
+----
+
+
+Revision: 235
+Author: philippejadin
+Date: 10:47:31, lundi 28 août 2006
+Message:
+yapaka participation / forum / templates
+----
+
+
+
+Revision: 234
+Author: philippejadin
+Date: 17:02:59, vendredi 30 juin 2006
+Message:
+clipboard will soon work
+----
+
+
+Revision: 233
+Author: philippejadin
+Date: 15:12:52, jeudi 29 juin 2006
+Message:
+- Clipboard class progress (use case documented)
+- yapaka design
+- structure.php cleanup
+----
+
+
+
+Revision: 232
+Author: philippejadin
+Date: 16:28:36, mardi 27 juin 2006
+Message:
+node optimisation
+----
+
+
+Revision: 231
+Author: philippejadin
+Date: 11:35:14, mardi 27 juin 2006
+Message:
+new design template, based on css framework 
+
+http://www.contentwithstyle.co.uk/Articles/17/
+
+...work in progress
+----
+
+
+
+Revision: 230
+Author: philippejadin
+Date: 17:11:12, lundi 26 juin 2006
+Message:
+participation clean up, some more doc
+----
+
+
+
+Revision: 229
+Author: philippejadin
+Date: 17:49:35, vendredi 23 juin 2006
+Message:
+announce, docs
+----
+
+
+Revision: 228
+Author: philippejadin
+Date: 17:09:49, vendredi 23 juin 2006
+Message:
+- participation class finished (first release)
+- date field now has dropdowns (need some more work)
+- session don't expire as soon as you close the browser
+- minor cache system update (adding ?no_cache=1 to urls disable caching)
+----
+
+
+
+Revision: 227
+Author: philippejadin
+Date: 17:10:53, mercredi 21 juin 2006
+Message:
+context menu js, structure and edit cleanup
+----
+
+
+
+Revision: 226
+Author: philippejadin
+Date: 17:43:32, mardi 20 juin 2006
+Message:
+popup hell solved :-)
+----
+
+
+Revision: 225
+Author: philippejadin
+Date: 16:36:58, mardi 20 juin 2006
+Message:
+validation and participation are on a good track !
+----
+
+Revision: 224
+Author: philippejadin
+Date: 17:11:52, lundi 19 juin 2006
+Message:
+- validation begins
+- new way of editing content, using popups. Not finished
+----
+
+
+Revision: 223
+Author: philippejadin
+Date: 17:29:36, vendredi 16 juin 2006
+Message:
+validation system begins. this is a  must have for any serious application isn't it ?
+----
+
+
+
+
+
+Revision: 219
+Author: philippejadin
+Date: 17:34:43, jeudi 15 juin 2006
+Message:
+index now shows clean warning if thinkedit is not installed
+----
+
+
+Revision: 218
+Author: philippejadin
+Date: 17:30:41, jeudi 15 juin 2006
+Message:
+fixed config folder issues
+----
+
+
+Revision: 217
+Author: philippejadin
+Date: 17:08:28, jeudi 15 juin 2006
+Message:
+config cleanup, samples added
+----
+
+
+
+Revision: 216
+Author: philippejadin
+Date: 13:54:49, jeudi 15 juin 2006
+Message:
+some more english translations  in default config files
+----
+
+
+
+Revision: 215
+Author: philippejadin
+Date: 11:56:34, jeudi 15 juin 2006
+Message:
+Installer now provides a way to setup the root url of an installation.
+----
+
+
+Revision: 214
+Author: philippejadin
+Date: 10:53:16, jeudi 15 juin 2006
+Message:
+Thinkedit will now warn if it not yet installed (in index.php)
+----
+
+
+
+Revision: 213
+Author: philippejadin
+Date: 10:51:22, jeudi 15 juin 2006
+Message:
+added tiny_mce in trunk. (tiny_mce = wysiwyg editor)
+----
+
+
+Revision: 212
+Author: philippejadin
+Date: 16:45:35, mercredi 14 juin 2006
+Message:
+Breadcrumb-like drop down menu in structure.template.php. Also to comply with the new design (essaie mon gars ;-))
+----
+
+
+
+Revision: 211
+Author: philippejadin
+Date: 16:22:46, mercredi 14 juin 2006
+Message:
+todo updated, participation class introduced, structure now more compliant to new design.
+----
+
+
+Revision: 210
+Author: philippejadin
+Date: 16:32:46, mardi 13 juin 2006
+Message:
+participation progress
+----
+
+
+
+Revision: 209
+Author: philippejadin
+Date: 17:06:56, lundi 12 juin 2006
+Message:
+some work on the clipboard feature. This is giving me headache. Multiligual record cleanup, template tags documented
+----
+
+Revision: 208
+Author: philippejadin
+Date: 13:42:28, lundi 12 juin 2006
+Message:
+installer now uses interface css. 
+----
+
+
+
+Revision: 207
+Author: philippejadin
+Date: 18:19:30, jeudi 8 juin 2006
+Message:
+Some doc on how we could link to nodes inside content
+----
+
+
+
+Revision: 206
+Author: philippejadin
+Date: 17:50:11, jeudi 8 juin 2006
+Message:
+Scroll tests, unfinished
+----
+
+
+Revision: 205
+Author: pierrelecrenier
+Date: 16:48:16, jeudi 8 juin 2006
+Message:
+Header and Footer > Clean up
+----
+
+
+
+Revision: 204
+Author: philippejadin
+Date: 15:10:23, jeudi 8 juin 2006
+Message:
+New te_admin_toolbox() function = te_root_link() provides a link to the root node
+
+te_admin_toolbox() functions are used inside templates.
+----
+
+
+
+Revision: 203
+Author: pierrelecrenier
+Date: 12:38:50, jeudi 8 juin 2006
+Message:
+style2.css
+----
+
+
+
+Revision: 202
+Author: philippejadin
+Date: 12:33:40, jeudi 8 juin 2006
+Message:
+Locale field creation bug fixed + thinkedit design locale aware
+----
+
+
+
+Revision: 201
+Author: pierrelecrenier
+Date: 12:32:31, jeudi 8 juin 2006
+Message:
+Remise du margin ge´ne´ral a` '0em'
+Main margin back to '0em'
+----
+
+
+
+Revision: 200
+Author: philippejadin
+Date: 16:32:08, mercredi 7 juin 2006
+Message:
+A lot of progress on the multilingual capability : the page cache is aware of locale, page can be translated, a locale chooser can be used in templates.
+----
+
+
+---------
+
+Old manual log :
+
+31/05/2006 : Approaching a 1.9 public release ! 
+
+10/02/2005 : session::persist() and api.txt
+More focus on simple datagrid like data management, then will focus on tree like content management
+
+4/12/2004 : node and module content separated. css added. page class resurected form oldies
+Implemented path management on the include side of things. Need to fix also paths management on the user (browser/http side)
+
+7/7/2004 : reimplemented without pear db class. No dependency and simplier db accesses.
+db.class.php is the reference implementation. I won't do compromises on refactoring. If all must be rewritten, then let it be rewritten.
+
+
+1/1/2004 : start of the project, this is the third attempt at doing a data / content management system with universal features

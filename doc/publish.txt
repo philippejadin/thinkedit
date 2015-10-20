@@ -1,0 +1,8 @@
+Publish / unpublish feature for nodes.
+
+Need to decide a way to manage unpublished items in node->getChildren() 
+for instance in menus (unpublished nodes must be shwon in the interface, 
+but not in the public website. 
+But the user should be able to preview content even in the public website).
+
+It must be based on context

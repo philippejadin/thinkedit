@@ -1,0 +1,123 @@
+Thinkedit plugin system
+(work in progress)
+
+
+6 nov 2006
+----------
+In all cases, there are multiple sorts of plugins :
+
+- content plugins, that allow us to add new types of content with new edit forms / templates / hooks
+- general plugins, which add new features, they need settings (forms + storage) and a place in the admin menu of the interface
+- general plugins that work silently no admin interface, no settings, no content
+
+
+1 nov 2006
+----------
+Instead of hooks, it will be based on the concept of "events". See event.class.php for more infos
+basically :
+
+$event->on()
+and
+$event->register()
+
+
+01 Aug 2006
+-----------
+I'd like to use the same "hooks" system as wordpress which seems very sucessfull.
+Hooks look like observer pattern
+
+some ideas : 
+
+- be able to autogenerate the list of availables hooks (they should not be hidden in code)
+- have the authors of plugins write a php class (and not a simple function)
+- provide an api to register a plugin, either for an action or for a filter. Without distinction
+
+
+$pluginmanager->register('') ?
+
+Use case : write a plugin to put all titles fields uppsercase (but not save them in the db)
+
+hook name is : 'record_get'
+
+class myplugin
+{
+	function register()
+	{
+		global $thinkedit,
+		$thinkedit->register($this, 'make_uppercase', 'record_get'); 
+	}
+	
+	function make_uppercase($field)
+	{
+	  return uppercase($field);
+	}
+}
+
+First IDEA :
+------------
+
+<?php
+
+/*
+Thinkedit plugin example
+
+Idea 1 : wordpress style plugin system :
+
+*/
+
+
+
+function mail_me_on_article_add($record)
+{
+		// code that sends an email
+}
+
+
+// plugin->on($action, $callback)
+$thinkedit->plugin->on('create_record',  'mailMeOnArticleAdd');
+
+?>
+
+
+
+Second idea : 
+-------------
+<?php
+/*
+Thinkedit plugin example
+
+Scenario
+Thinkedit plugin manager would scan the /plugin folder, and include and instantiante all classes found
+
+Then it would create an array of all the methods found in those classes
+
+
+*/
+
+
+class test
+{
+		// maybe even not needed :
+		function init()
+		{
+				global $thinkedit;
+				$thinkedit->plugin->register($this);
+		}
+		
+		
+		// how to define an api for this ?
+		function onAddRecord($record)
+		{
+				// code that sends an email when a record is added
+		}
+		
+		
+}
+?>
+
+
+
+
+ 
+
+

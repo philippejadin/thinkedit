@@ -1,0 +1,18 @@
+Somewhat deprecated.
+
+
+
+
+Functions part of the functions library :
+(xyz.lib.php files)
+
+todo: use a documentation generator
+
+function translate($id)
+Will return the translation of the item with 'id'
+If not found, item is inserted into the db
+Locale aware, of course
+
+
+function debug($data, $title=false)
+will debug data and add title if title is defined

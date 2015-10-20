@@ -1,0 +1,21 @@
+Field configuration
+
+
+Filter field content on display :
+// bbcode could be used as an output filter
+//$data['content']['page']['field']['body']['outputfilter']='bbcode';
+
+
+Filter field content even before it is saved to the db :
+// we could trim before saving
+//$data['content']['page']['field']['body']['inputfilter']='trim';
+
+Validate fields
+//$data['content']['page']['field']['body']['validation']['is_required']=1;
+//$data['content']['page']['field']['age']['validation']['min_int']['value']=0;
+//$data['content']['page']['field']['age']['validation']['min_int']['help']['en']='Please put a number bigger than 0';
+//$data['content']['page']['field']['age']['validation']['max_int']['value']=200;
+//$data['content']['page']['field']['age']['validation']['max_int']['help']['en']='Please put a number smaller than 200';
+
+
+

@@ -1,0 +1,6 @@
+Thinkedit is a CMS. It let's you create custom content types, structure your site in a tree, make relations between your content items.
+With large emphasis on databases, it is highly extensible through simple configuration files. The aim is to provide full customization trough configuration files and plugins. The tool is able to work with an existing database schema. You can extend your schema without changing the tool code.
+
+It is very easy to install : an installer is provided.
+
+Thinkedit is the result of years of closed development and experimentations. We think it is time to ask feedback from others.

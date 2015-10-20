@@ -1,0 +1,44 @@
+Deprecated
+
+API used by more than one object in the system.
+If an object want to  implement a specific API, here are the details :
+
+
+Common methods
+--------------
+Those can be used by any class, those are often usefull :
+
+getId
+setId
+getArray
+setArray
+getTitle
+setTitle
+count
+
+
+Persistence
+-----------
+In order to persist, an object must provide :
+
+getId() : returns an ID
+getSettings() (array) returns current known settings without defaults
+setSettings($array) override settings with those from the array passed
+
+You can do it however you like, as long as the data passed can be put in a session (an array of array can be used, avoid objects)
+
+
+
+Datagrid
+--------
+
+In order to be displayed by a datagrid, an object may provide some methods, if you don't provide those, youc an feed the datagrid using it's own api.
+
+getModules() an array of modules
+canLimit() -> boolean (true if support limited queries)
+setLimit(start, stop)
+canOrderBy();
+setOrderBy() , column id
+
+a module must have a list of elements :
+module->element[element_id]->get() isPrimary() getTitle() isSortable()

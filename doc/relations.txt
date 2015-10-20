@@ -1,0 +1,40 @@
+How the relation system works
+... and how the interface workflow is defined
+
+When editing something, you can relate it to something else
+
+For instance, relate an image to an article
+
+Todo : add support for relation type, like this :
+
+author isAuthorOf article
+photo isCover of book 
+etc...
+
+
+
+User is editing an article :
+
+Relation title
+"This item has no relations"
+User clicks on "Add relation"
+
+User goes to relate.php?action=init :
+A cookie is set, with the original url, UID of item currently edited, and action="relate"
+User is redirected to main.php. Now, everywhere in the header, 
+there is an info pannel explaining :
+
+You are in "relate" mode, you can add a relation to the item you are currently editing. 
+If you want to cancel, [click here] (relate.php?action=cancel)
+
+Everywhere needed, there is a [make relation] button 
+that links to relate.php?action=relate&relate_to_class, type, id, etc... 
+
+After clicking on either [make relation] or [cancel], user is redirected to the original url.
+
+Problem : the user must save other work before clicking on [Add relation] 
+else the content of the form will be lost.
+
+The relation list could be put in an iframe (second iteration) 
+and the relation browser could be a popup with javascript autoupdate
+

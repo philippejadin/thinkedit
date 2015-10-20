@@ -1,0 +1,25 @@
+How to create code?
+
+First, write pseudo code using comments, then write the real code :
+
+This : 
+
+// Db syncer, will create database tables and field corresponding to the xml config files
+
+// init
+
+
+// loop each config table
+// if table not there, create it with simple id field
+
+// if table exists, 
+// loop over fields
+// if field not there, create it with right type
+
+// handle field change type ?
+// this may be a risky job
+
+// end
+
+
+would become : tools/db_sync.php

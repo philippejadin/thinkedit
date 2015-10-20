@@ -1,0 +1,39 @@
+This is deprecated
+
+
+Node :
+
+Doesn't know anything about content, it is all about structure (tree, hierarchy)
+
+getModule (returns module, for content)
+hasChildren
+getChildren
+hasParent
+getParent
+addChild
+addParent
+removeChild
+removeParent / delete
+getNodeId
+
+
+$childs = $root->getChildren();
+foreach ($childs as $child)
+{
+echo $child->getContent()->getTitle();
+}
+
+
+Module :
+
+All about content.
+
+getId
+getTitle
+setTitle
+isMultilingual
+setLocale
+getLocale
+getNode (returns node item if present)
+
+

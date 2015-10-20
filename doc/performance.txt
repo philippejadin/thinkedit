@@ -1,0 +1,42 @@
+07-03-2006 : big performance problems with bigger trees (more than 100's nodes)
+
+
+
+Optimization ideas : 
+
+1.
+- store the node level in the DB + update method
+- store the hasChildren results
+- store the hierarchy (like cmsmadesimple)
+
+do all the functions based on a single sql query, with filtering
+update sort order functions to use ints, and update when needed
+pad order to 00001.00002.00001 for instance.
+
+2.
+Store the level and order as if it was a flat list :
+
+order  name        level
+1      Home        0
+2        Products  1
+3        News      1
+4        Press     1
+
+etc...
+
+
+3. use a separate table for 
+http://fungus.teststation.com/~jon/treehandling/TreeHandling.htm
+http://www.sitepoint.com/forums/showthread.php?t=186601&page=3&pp=25
+
+First table
+id
+parentid
+
+Second table : path
+id
+ancestorid
+
+
+
+

@@ -1,0 +1,61 @@
+Configuration keywords
+
+
+<use></use>
+
+can be put in table, field, others (?)
+
+
+- main
+- list
+- edit
+- relation
+- structure
+
+
+<field>
+<use>list,edit</use>
+</field>
+means this field will be shown in list, edit  mode
+
+<table>
+<use>main</use>
+</table>
+Means this table will be shown on the homepage
+
+
+Other config format
+-------------------
+
+1. YAML
+I tried yaml, but it doesn't work well (no tabs, weak indent system)
+
+
+2. currently : XML
+The only problem with xml is to have a two directions conversion
+
+like xml<->array
+
+We currently only have xml -> array
+
+
+We could also use php arrays and php include :
+
+$config['table']['page']['title']['en'] = 'Page'
+
+Pro : 
+- ultra fast (php include, no cache needed)
+- simple to read write files
+- exact representation of php data structure
+
+Con :
+- not so good for human editing
+- redundant (if you want to rename a table, you have to mod every ['table_name'] item)
+- how to serialize $table[0],[1], [2] etc... ?
+
+
+3. Json ?
+todo
+
+
+

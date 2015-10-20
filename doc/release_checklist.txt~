@@ -1,0 +1,6 @@
+Before doing a public release
+
+- remove all personal datas (including passwords in config files)
+- remove project specific files
+- remove /test folder
+- remove all unneeded files

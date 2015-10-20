@@ -1,0 +1,9 @@
+Permissions in Thinkedit
+
+Permissions will be implemented as follows :
+
+
+user <-> role <-> permission
+
+
+

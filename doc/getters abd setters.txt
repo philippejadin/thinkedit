@@ -1,0 +1,10 @@
+Getters ans setters are not evil
+
+
+Why?
+
+Because you can validate data if you use getters and setters.
+
+The frontieer between developpers and real world is very thin when building online applications.
+
+You'd better validate as soon as possible to avoid problems.

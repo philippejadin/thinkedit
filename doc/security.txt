@@ -1,0 +1,4 @@
+If there is a security issue that must be fixed. Or at least suspicious code that must be reworked,
+
+Add "todo : security" near the piece of code and add comments
+Remove this "tag" once solved

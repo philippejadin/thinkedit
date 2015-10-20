@@ -1,0 +1,64 @@
+Validation
+
+
+An example in a config file : 
+
+$data['table']['page']['field']['title']['validation']['is_required']=true;
+
+-> this would ask the field to be required (not empty) before submiting a form
+For instance, you don't always need to validate fields, but you want to specify 
+that they are required.
+
+You can also add validators :
+
+$data['table']['page']['field']['author_email']['validation']['is_email']=true;
+$data['table']['page']['field']['author_email']['validation']['is_email']['help']['en']='Please enter a valid email';
+
+If a field is required, an error message is shown if it is empty.
+
+If a field (required or not) is filled, and if there are validators, they are run against the field
+
+
+List of validators :
+
+is_required
+is_int
+is_alpha 
+is_alpha_num (a..z & 0..9)
+is_email
+is_min_size (lenght of the field)
+is_max_size
+is_min
+is_max
+is_url
+is_url_and_connect (check url form, and try to connect to server to validate url)
+
+Default validators 
+Some field types have default validation, depending on their class :
+email : is_email
+int : is_int
+login : is_required
+password : is_required
+password : is_min_size = 6 (?)
+
+Any field, if marked "is_title" is allways required and thus cannot be empty
+
+In concrete use, with fields :
+
+field_base :
+- check if it is required
+- validates using configured validators, only if the field is filled
+
+Fills $this->errors if needed
+
+Return true or false if validation succeeds or not.
+
+Each specific field can add validation in $this->validate() but they must 
+return parent::validate(); 
+at the end as well
+
+The error array
+$error[0]['type'] = 'required';
+$error[0]['help']['en'] = 'This field is required';
+
+

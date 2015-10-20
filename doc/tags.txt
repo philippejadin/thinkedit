@@ -1,0 +1,16 @@
+Custom tags in postings to link to nodes or images or wathever is needed
+
+It could use a wiki syntax or bbcode (which is almost the same)
+
+
+Use case : use wants to link to another node inside content.
+
+Wiki : 
+[node:5] -> index.php?node_id=5&etc...
+
+BBcode :
+[node=5]Mylink to node 5[/node]
+
+or BBcode variant :
+[node id=5]Mylink to node 5[/node]
+
